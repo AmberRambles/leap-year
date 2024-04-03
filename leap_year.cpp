@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 bool leapCheck(int year) {
 	if (year % 4 == 0){//if year is divisible by 4
 		if (year % 100 == 0){//and is also divisible by 100
@@ -9,9 +9,11 @@ bool leapCheck(int year) {
 			else{//but not by 400
 				return false;
 			}
+		}
 		else{//and not divisble by 100
 			return true;
 		}
+	}
 	else{//if year is not evenly divisible by 4
 		return false;
 	}
