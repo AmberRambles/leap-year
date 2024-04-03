@@ -20,25 +20,19 @@ If the year can be evenly divided by 4 then it is a leap year, however…
 If that year can be evenly divided by 100, and it is not evenly divided by 400, then it is NOT a leap year.
 If that year is evenly divisible by 400, then it is a leap year.
    * */
-   //Test 1
-   bool hope = false;
-   if(year_input%4==0){
-     hope = true;
-     //Test 1 pass, test 2 start
-     }
-   else{hope = false;} 
-   if(year_input%100==0){
-       //continue to final test
-     }
-     
-         
-         //std::cout << "Yeah, that looks like a leap year!\n";
-       
-       
-   
-   
-   if(!hope){//if there is no hope (hope is false, so statement is true)
-     std::cout << "Sorry, not a leap year.\n";
-   }
-  return 0;
+
+bool leapCheck(int year) {
+	if (year % 4 == 0){//if year is divisible by 4
+		if (year % 100 == 0){//and is also divisible by 100
+			if (year % 400 == 0){//and also divisble by 400
+				return true}
+			else{//but not by 400
+				return false
+			}
+		else{//and not divisble by 100
+			return true
+		}
+	else{//if year is not evenly divisible by 4
+		return false
+	}
 }
